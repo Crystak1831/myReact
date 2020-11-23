@@ -37,14 +37,15 @@ class App extends React.Component {
         })
   }
 
-  deleteHandler(id){
+  deleteHandler(id, event){
       const list = [...this.state.list]
 
-      // list.splice(id,1);
+      list.splice(id,1);
       // const updateList = list.filter(item =>item.id !== id)
-      // this.setState({
-      //     list: updateList
-      // })
+      this.setState({
+          // list: updateList
+          list: list
+      })
 
   }
 
