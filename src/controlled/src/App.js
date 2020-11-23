@@ -2,6 +2,7 @@ import './App.css';
 import React, {Component} from 'react';
 import ControlledComponent from "./Components/ControlledComponent";
 import UnControlled from "./Components/unControlled";
+import MutipleControll from "./Components/MutipleControll";
 
 class App extends React.Component {
    render() {
@@ -9,6 +10,7 @@ class App extends React.Component {
            <div>
                <ControlledComponent/>
                <UnControlled/>
+               <MutipleControll/>
            </div>
        )
    }

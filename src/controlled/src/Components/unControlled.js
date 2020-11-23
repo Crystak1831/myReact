@@ -16,8 +16,8 @@ class UnControlled extends Component {
     handleSubmit = (event) =>{
         alert('Name submit' + this.input.current.value)
         event.preventDefault()
-
     }
+
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
