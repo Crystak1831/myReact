@@ -17,16 +17,22 @@ class App extends Component {
 
   changeHandler = (event,id) =>{
     const personIndex = this.state.persons.findIndex(p => {
+      //判断一个人的id是否是id,如果p.id是和传递的参数id一样，则是true
       return p.id === id;
     });
 
     const person = {
+      //把Person index作为数组返回
       ...this.state.persons[personIndex]
     };
+    // console.log(person)
 
     person.name = event.target.value
 
+    //获取整个persons的obj
     const persons = [...this.state.persons]
+    // console.log(persons)
+    //persons[personIndex]应该等于30行的updated person
     persons[personIndex] = person
 
     this.setState({
