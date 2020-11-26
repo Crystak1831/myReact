@@ -22,6 +22,8 @@ class App extends React.Component{
 
 getData =() =>{
       var api = 'https://jsonplaceholder.typicode.com/users';
+
+      //has two arguments, the first one is api, the second one is get the specific data form the api
       axios.get(api, {
           params: {
               id: this.state.inputValue
