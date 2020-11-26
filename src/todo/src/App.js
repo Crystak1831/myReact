@@ -20,7 +20,7 @@ class App extends React.Component {
 
   addHandler =()=>{
         const newItem = {
-            id: 1+ Math.random(),
+            id: Math.random(),
 
             value: this.state.newItem.slice()
             //和slice一样是shallow copy
@@ -33,7 +33,7 @@ class App extends React.Component {
 
         this.setState({
             list,
-            newItem:""
+            newItem:" "
         })
   }
 
