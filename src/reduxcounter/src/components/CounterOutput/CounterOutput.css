@@ -1,0 +1,9 @@
+.CounterOutput{
+    width:100%;
+    background-color: pink;
+    color: rgba(149,117,239,0.4);
+    font-size:1.8rem;
+    text-align: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
