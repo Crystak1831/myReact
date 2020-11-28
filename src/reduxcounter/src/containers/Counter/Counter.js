@@ -34,7 +34,7 @@ class Counter extends Component {
         return (
             <div>
                 {/*把state影射成props*/}
-                <CounterOutput value = {this.props.ctr}/>
+                <CounterOutput value = {this.props.ctr} />
                 {/*<CounterOutput value = {this.state.counter}/>*/}
                 <CounterControl label = "Increment" clicked = {this.props.onIncrementCounter}/>
                 <CounterControl label = "Decrement" clicked = {this.props.onDecrementCounter}/>
@@ -43,7 +43,10 @@ class Counter extends Component {
                 <hr/>
                 <button onClick={this.props.onStoreResult}>Store Result</button>
                 <ul>
-                    <li onClick={this.props.onDeleteResult}></li>
+                    {this.props.storedResults.map(strResult => (
+                        <li key={strResult.id} onClick={this.props.onDeleteResult}>{strResult.value}</li>
+                    ))}
+
                 </ul>
             </div>
         );
@@ -56,7 +59,8 @@ class Counter extends Component {
 const mapStateToProps = state => {
     return {
         //影射的是reducer里的counter
-        ctr: state.counter
+        ctr: state.counter,
+        storedResults: state.results
     };
 }
 
