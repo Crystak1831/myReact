@@ -1,3 +1,4 @@
+import * as actionTypes from './actions'
 
 const initialState = {
     counter:0,
@@ -7,7 +8,7 @@ const initialState = {
 const reducer = (state = initialState, action) =>{
 
     switch(action.type){
-        case 'INCREMENT':
+        case actionTypes.INCREMENT:
             // return{
                 //copy old state property
             const newState = {...state}
@@ -18,29 +19,29 @@ const reducer = (state = initialState, action) =>{
             return newState
                 // counter: state.counter + 1
             // }
-        case 'DECREMENT':
+        case actionTypes.DECREMENT:
             return{
                 ...state,
                 counter: state.counter - 1
             }
-        case 'ADD':
+        case actionTypes.ADD:
             return {
                 ...state,
                 counter: state.counter + action.value
             }
-        case 'SUB':
+        case actionTypes.SUB:
             return {
                 ...state,
                 counter: state.counter - action.value
             }
-        case 'STORE_RESULT':
+        case actionTypes.STORE_RESULT:
             return{
                 ...state,
                 //use concat() instead of push(), 应为concat返回一个新的array，不会改变原数组，而push会改变原数组
                 //即使有'...state'
                 results: state.results.concat({id: new Date(), value: state.counter})
             }
-        case 'DELETE_RESULT':
+        case actionTypes.DELETE_RESULT:
             /* method1:splice, if we use splice, we need to copy the array first, splice() mutate the old array
             const id = 2;
             const newArray = [...state.results]
