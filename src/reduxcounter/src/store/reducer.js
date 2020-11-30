@@ -40,6 +40,18 @@ const reducer = (state = initialState, action) =>{
                 //即使有'...state'
                 results: state.results.concat({id: new Date(), value: state.counter})
             }
+        case 'DELETE_RESULT':
+            /* method1:splice, if we use splice, we need to copy the array first, splice() mutate the old array
+            const id = 2;
+            const newArray = [...state.results]
+            newArray.splice(id,1)*/
+
+            //method2 : filter, filter doesn't touch the old one return new array
+            const updatedArray = state.results.filter(result =>result.id !== action.resultElId )
+            return{
+                ...state,
+                results: updatedArray
+            }
     }
 
     return state
