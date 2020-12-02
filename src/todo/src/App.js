@@ -10,6 +10,8 @@ class App extends React.Component {
       newItem: '',
       list: []
     }
+
+    // this.addHandler = this.addHandler.bind(this)
   }
 
   changeHandler(e){
@@ -18,6 +20,7 @@ class App extends React.Component {
       })
   }
 
+  // addHandler(){
   addHandler =()=>{
         const newItem = {
             id: Math.random(),
