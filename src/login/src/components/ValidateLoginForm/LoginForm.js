@@ -17,15 +17,19 @@ class LoginForm extends Component {
     }
 
     handleSubmit = (e) =>{
-        console.log("submitting");
-        console.log(this.state)
+        console.log("submitting" + " " +this.state.email + "password:"+ this.state.password);
+        // console.log(this.state.value)
+        e.preventDefault()
     }
 
     render() {
         // const {email, password} = this.state
         return (
 
-                <form onSubmit={this.handleSubmit}>
+                <form
+                    onSubmit={this.handleSubmit}
+
+                >
                     <label htmlFor="email">Email</label>
                     <br/>
                     <input type="text"
@@ -38,7 +42,7 @@ class LoginForm extends Component {
 
                     <label htmlFor="email">Password</label>
                     <br/>
-                    <input type="text"
+                    <input type="password"
                             name="password"
                             value={this.state.password}
                             onChange={this.handleChange}

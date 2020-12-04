@@ -12,8 +12,8 @@ class App extends Component {
     render() {
         return (
             <div>
-                <ValidateLoginForm/>
-                {/*<LoginForm/>*/}
+                {/*<ValidateLoginForm/>*/}
+                <LoginForm/>
             </div>
         );
     }
