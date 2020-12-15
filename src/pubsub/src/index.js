@@ -7,8 +7,8 @@ import RouterIndex from "./RouterIndex";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/*<App />*/}
-    <RouterIndex/>
+    <App />
+    {/*<RouterIndex/>*/}
 
   </React.StrictMode>,
   document.getElementById('root')
