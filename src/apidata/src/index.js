@@ -1,17 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/App';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
-import RouterIndex from "./RouterIndex";
-import Pubcolor from "./components/Pubcolor";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/*<App />*/}
-    {/*<RouterIndex/>*/}
-    <Pubcolor/>
-
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
